@@ -54,10 +54,6 @@ const rest = new REST({ version: '9' }).setToken(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
 	console.log('Ready!');
-	console.log('Trying to refresh soundex');
-	soundex.initSoundex();
-	console.log('Soundex refreshed');
-
 });
 
 client.on('interactionCreate', async interaction => {
