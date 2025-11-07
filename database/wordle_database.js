@@ -1,4 +1,4 @@
-const db = require('database/wordle_database_connection');
+const db = require('./wordle_database_connection');
 
 const wordleDatabase = function(){
     this.getCurrentGame = async function(bodyObject){

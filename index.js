@@ -130,8 +130,8 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
-let lastWordle = await wordle.initOnStartup()
-let nextWordleTime = await getNextWordleTimeout();
+let lastWordle = wordle.initOnStartup()
+let nextWordleTime = getNextWordleTimeout()
 setTimeout(nextGame, nextWordleTime);
 
 async function nextGame() {

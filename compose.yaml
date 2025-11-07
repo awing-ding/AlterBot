@@ -8,14 +8,19 @@ services:
     volumes:
       - config:/usr/src/bot/config
     env_file: ./.env
+    environment:
+      - API_KEY
   database:
     container_name: alterbot_db
     build:
-      context: database
-      dockerfile: ./database/Dockerfile
+      context: ./database
+      dockerfile: ./Dockerfile
     restart: unless-stopped
     volumes:
       - database:/var/database
+    env_file: ./.env
+    environment:
+      - API_KEY
 volumes:
   config:
     driver: local

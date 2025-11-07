@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "dotenv": "^17.2.2",
     "sqlite3": "^5.1.7"
   }
 }
