@@ -72,6 +72,8 @@ module.exports = {
         "warnNumberReaction",
         "channelSondage",
         "redirectionTimeoutMinutes",
+        "categoryArchive",
+        "roleArchivist"
     ],
 
     deletionList : {}, // of type personId : [channelId, channelId..]

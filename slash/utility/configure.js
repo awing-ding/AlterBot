@@ -65,7 +65,7 @@ module.exports = {
             } else {
                 await utilities.updateConfig(setting, value);
             }
-            if (setting.startsWith("channel")) {
+            if (setting.startsWith("channel") || setting.startsWith("category")) {
                 await interaction.reply(`Setting ${setting} has been set to <#${value}>.`);
             } else if (setting.startsWith("role")) {
                 await interaction.reply(`Setting ${setting} has been set to <@&${value}>.`);
@@ -77,7 +77,7 @@ module.exports = {
                 await interaction.reply({content: "Invalid setting", ephemeral: true});
                 return;
             }
-            if (setting.startsWith("channel")) {
+            if (setting.startsWith("channel") || setting.startsWith("category")) {
                 await interaction.reply(`Setting ${setting} has been set to <#${await utilities.readConfigProperty(setting)}>.`);
             } else if (setting.startsWith("role")) {
                 await interaction.reply(`Setting ${setting} has been set to <@&${await utilities.readConfigProperty(setting)}>.`);
