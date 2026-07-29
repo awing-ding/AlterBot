@@ -18,8 +18,7 @@ module.exports = {
                 .addStringOption(option =>
                     option.setName('value')
                         .setDescription('The value to set for the setting')
-                        .setRequired(true)
-                        .setAutocomplete(true))
+                        .setRequired(true))
         )
         .addSubcommand(subcommand =>
             subcommand
